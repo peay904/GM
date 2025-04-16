@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(#fff8f0, #e0f7ff);
+  color: #333;
+  overflow-x: hidden;
+}
+
+.container {
+  padding: 20px;
+  position: relative;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.panel {
+  margin: 60px 0;
+  position: relative;
+  text-align: center;
+  opacity: 0;
+}
+
+.photo {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.2));
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.photo:hover {
+  transform: scale(1);
+}
+
+.caption {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-style: italic;
+  color: #555;
+}
+
+.doodle {
+  position: absolute;
+  max-width: 50px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.top-left {
+  top: -20px;
+  left: 10px;
+}
+
+.top-right {
+  top: -20px;
+  right: 10px;
+}
+
+.bottom-left {
+  bottom: -20px;
+  left: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+
+  .panel {
+    margin: 40px 0;
+  }
+
+  .photo {
+    max-width: 90%;
+  }
+
+  .caption {
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+
+  .doodle {
+    max-width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .photo {
+    max-width: 100%;
+  }
+
+  .caption {
+    font-size: 0.8rem;
+  }
+
+  .doodle {
+    display: none;
+  }
+}

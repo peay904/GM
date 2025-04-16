@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chelsea is..</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        
+        .container {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .affirmation-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5rem;
+            margin: 2rem 0;
+            min-height: 80px;
+        }
+        
+        .static-text {
+            margin-right: 15px;
+            font-weight: 600;
+        }
+        
+        .dynamic-text {
+            font-weight: bold;
+            position: relative;
+            transition: opacity 0.3s ease;
+            min-width: 200px;
+        }
+        
+        footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+    <!-- Adding Google Fonts for variety -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@700&family=Pacifico&family=Permanent+Marker&family=Raleway:wght@700&family=Roboto:wght@700&family=Sacramento&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        <div class="affirmation-container">
+            <div class="static-text">Chelsea is:</div>
+            <div id="affirmation" class="dynamic-text">beautiful</div>
+        </div>
+        <footer>Take a moment to believe these words. You deserve them.</footer>
+    </div>
+
+    <script>
+        const affirmations = [
+            {text: "beautiful", color: "#FF6B6B", font: "'Pacifico', cursive"},
+            {text: "worthy", color: "#4ECDC4", font: "'Montserrat', sans-serif"},
+            {text: "loved", color: "#FF8C42", font: "'Dancing Script', cursive"},
+            {text: "enough", color: "#845EC2", font: "'Permanent Marker', cursive"},
+            {text: "strong", color: "#008080", font: "'Raleway', sans-serif"},
+            {text: "funny", color: "#D65DB1", font: "'Ubuntu', sans-serif"},
+            {text: "queen", color: "#4A7C59", font: "'Roboto', sans-serif"},
+            {text: "capable", color: "#C75146", font: "'Courier New', monospace"},
+            {text: "resilient", color: "#6A0572", font: "'Arial Black', sans-serif"},
+            {text: "inspiring", color: "#4285F4", font: "'Georgia', serif"},
+            {text: "sexy", color: "#F39237", font: "'Sacramento', cursive"},
+            {text: "compassionate", color: "#B83B5E", font: "'Verdana', sans-serif"},
+            {text: "valuable", color: "#3A6B35", font: "'Trebuchet MS', sans-serif"},
+            {text: "unique", color: "#5C4742", font: "'Impact', sans-serif"},
+            {text: "important", color: "#1A535C", font: "'Lucida Console', monospace"}
+        ];
+        
+        const affirmationElement = document.getElementById('affirmation');
+        let currentIndex = 0;
+        
+        function cycleAffirmations() {
+            affirmationElement.style.opacity = 0;
+            
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % affirmations.length;
+                const current = affirmations[currentIndex];
+                
+                affirmationElement.textContent = current.text;
+                affirmationElement.style.color = current.color;
+                affirmationElement.style.fontFamily = current.font;
+                affirmationElement.style.opacity = 1;
+            }, 300);
+        }
+        
+        // Initialize first word's style
+        affirmationElement.style.color = affirmations[0].color;
+        affirmationElement.style.fontFamily = affirmations[0].font;
+        
+        // Change affirmation every 1 second
+        setInterval(cycleAffirmations, 1000);
+    </script>
+</body>
+</html>

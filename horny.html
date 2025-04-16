@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Vibes</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("img/dick.gif");
+      background-repeat: repeat;
+      background-size: 100px 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .main-gif {
+      max-width: 90%;
+      max-height: 90%;
+      border: 5px solid white;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        background-size: 50px 50px;
+      }
+      .main-gif {
+        max-width: 80%;
+        max-height: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="img/me.gif" alt="Me" class="main-gif" />
+</body>
+</html>

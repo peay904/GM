@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Good morning!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive meta tag -->
+    <style>
+        body {
+            font-family: Georgia, sans-serif;
+            max-width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: #696666;
+        }
+        h1 {
+            color: #e96c6c;
+            text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+            text-align: center;
+            font-size: 1.8em;
+        }
+        .option {
+            display: block; /* Make buttons full-width */
+            padding: 15px; /* Increase padding for touch targets */
+            margin: 10px 0; /* Add consistent spacing */
+            background: #161010;
+            border-left: 1px solid #333;
+            cursor: pointer;
+            color: white;
+            border-radius: 8px;
+            font-size: 1.2em; /* Slightly larger font for readability */
+            text-align: center;
+            text-decoration: none; /* Remove underline */
+        }
+        .option:hover, .option:focus {
+            background: #00af2c;
+        }
+    
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em; /* Adjust title size for smaller screens */
+            }
+            .option {
+                font-size: 1em; /* Adjust button font size */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>How ya feeling this morning?</h1>
+    
+    <a href="tired.html" class="option">Tired</a>
+    
+    <a href="aggy.html" class="option">Aggy</a>
+    
+    <a href="nostalgia.html" class="option">Nostalgic</a>
+    
+    <a href="confused.html" class="option">Confused</a>
+    
+    <a href="selfconscious.html" class="option">Self-Conscious</a>
+
+    <a href="horny.html" class="option">Horny</a>
+</body>
+</html>
